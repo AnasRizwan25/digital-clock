@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(./images/pic4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+  width: 950px;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.hourShowing,.minShowing,.secShowing,.dayShowing,.eventShowing{
+  font-size: 85px;
+}
+
+/* .dot::after{
+  content: ":";
+} */
+.border{
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.473);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.div1,.div2,.div3,.dayShowing,.eventShowing{
+  /* border: 1px solid white; */
+  width: 140px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  position: relative;
+}
+.divTool{
+  position: absolute;
+  bottom: 20px;
+}
+
+.dayShowing{
+  width: 180px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width:900px) {
+  .hourShowing,.minShowing,.secShowing,.dayShowing,.eventShowing{
+    font-size: 35px;
+  }
+  .container{
+    width: 500px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .dayShowing{
+    width: 100px;
+    margin-right: 10px;
+  }
+  .div1,.div2,.div3,.dayShowing,.eventShowing{
+    /* border: 1px solid white; */
+    width: 80px;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+  }
+  .divTool{
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .hourShowing,.minShowing,.secShowing,.dayShowing,.eventShowing{
+    font-size: 25px;
+  }
+  .container{
+    width: 320px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .div1,.div2,.div3,.dayShowing,.eventShowing{
+    /* border: 1px solid white; */
+    width: 40px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+  }
+  .divTool{
+    font-size: 9px;
+  }
+  .dayShowing{
+    width: 0px;
+    margin-right: 10px;
+  }
+}
