@@ -73,10 +73,10 @@ body {
 
 @media screen and (max-width:900px) {
   .hourShowing,.minShowing,.secShowing,.dayShowing,.eventShowing{
-    font-size: 42px;
+    font-size: 38px;
   }
   .container{
-    width: 490px;
+    width: 500px;
     box-sizing: border-box;
     height: 100vh;
     display: flex;
@@ -91,7 +91,7 @@ body {
   } */
   .div1,.div2,.div3,.dayShowing,.eventShowing{
     /* border: 1px solid white; */
-    width: 80px;
+    width: 90px;
     height: 145px;
     display: flex;
     align-items: center;
@@ -99,13 +99,17 @@ body {
     border-radius: 30px;
     position: relative;
   }
+  .div4{
+    width: 90px;
+    height: 145px;
+  }
   .divTool{
     font-size: 12px;
   }
 }
 
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
   body{
   background-position: center;
   }
