@@ -5,11 +5,28 @@
 }
 body {
   background-image: url(./images/pic4.jpg);
+  transition: background-image 5s;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Poppins", system-ui;
   font-weight: 400;
   font-style: normal;
+  animation: anime 3s;
+}
+
+@keyframes anime {
+  0%{
+    background-image: url(./images/pic4.jpg);
+    opacity: 0;
+  }
+  50%{
+    background-image: url(./images/pic4.jpg);
+    opacity: 0.5;  
+  }
+  100%{
+    background-image: url(./images/pic4.jpg);
+    opacity: 1;
+  }
 }
 
 .container{
