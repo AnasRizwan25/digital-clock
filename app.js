@@ -11,15 +11,17 @@ let secId = document.getElementById('secId');
 //This function for formatting
 function hours(time,hourId,minId,secId){
   let count = 12;
-  if(time.getHours() > 12){
+  if(time.getHours() > 12 && time.getHours() < 24){
     hour.innerText = time.getHours() - count;
-    count++;
+  } else if(time.getHours() === 0){
+    hour.innerText = count;
   }
 
   if((time.getHours() > 12 && time.getHours() < 22) || 
-  (time.getHours() >=1 && time.getHours() < 10)){
+  (time.getHours() > 0 && time.getHours() < 10)){
     hourId.innerText = '0';
-  } else{
+  }
+   else{
     hourId.innerText = '';
   }
   if(time.getMinutes() >= 0 && time.getMinutes() < 10){
