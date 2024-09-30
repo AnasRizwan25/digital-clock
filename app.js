@@ -1,8 +1,13 @@
-let days = ['SUN','MON','TUE','WED','THUS','FR','SAT'];
+const days = ['SUN','MON','TUE','WED','THUS','FR','SAT'];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 let hour = document.getElementById('hour');
 let min = document.getElementById('minute');
 let sec = document.getElementById('second');
+
+let month = document.getElementById('month');
+let date = document.getElementById('date');
+let year = document.getElementById('year');
 
 let hourId = document.getElementById('hourId');
 let minId = document.getElementById('minId');
@@ -47,20 +52,29 @@ function clock(time){
 }
 
 //This function for Showing time
-function Time(hour,min,sec,days){
+function Time(hour,min,sec,days,months,date,year){
 
   let time = new Date();
   let iteration = time.getDay();
+  let iMonth = time.getMonth();
+
 
   document.getElementById('days').innerText = days[iteration];
   hour.innerText = time.getHours();
   min.innerText = time.getMinutes();
   sec.innerText = time.getSeconds();
 
+  month.innerText = months[iMonth];
+  date.innerText = `${time.getDate()},`;
+  year.innerText = time.getFullYear();
+
   hours(time,hourId,minId,secId);
   clock(time);
 }
 
+
 setInterval(() =>{
-  Time(hour,min,sec,days);
+  Time(hour,min,sec,days,months,date,year);
 },1000);
+
+Time(hour,min,sec,days,months,date,year);
